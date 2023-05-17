@@ -7,6 +7,10 @@ public class ClientJavaConfig {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         Camera camera = context.getBean("camera", Camera.class);
         camera.doPhoto();
+
+        Camera camera1 = context.getBean("camera", Camera.class);
+
+        System.out.println(camera == camera1);
     }
 
 }
